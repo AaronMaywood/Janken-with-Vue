@@ -4,9 +4,11 @@ import UserHand from './components/UserHand.vue'
 import Result from './components/Result.vue'
 
 let showResult = ref(false)
+let user = ref("")
 
 function userHand(e){
   showResult.value = true
+  user.value = e
 }
 
 function next(e){
@@ -19,7 +21,7 @@ function next(e){
     <div class="userhand">
 	    <UserHand @change="userHand"></UserHand>
 	  </div>
-    <Result :show="showResult" @next="next"></Result>
+    <Result :show="showResult" :user="user" @next="next"></Result>
   </main>
 </template>
 
