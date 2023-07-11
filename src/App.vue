@@ -1,15 +1,22 @@
 <script setup>
+import { ref } from 'vue'
 import UserHand from './components/UserHand.vue'
+import Result from './components/Result.vue'
+
+let showResult = ref(false)
+
 function userHand(e){
-	console.log(e)
+  showResult.value = true
 }
 </script>
 
 <template>
+  {{showResult}}
   <main>
     <div class="userhand">
-	  <UserHand @change="userHand"></UserHand>
-	</div>
+	    <UserHand @change="userHand"></UserHand>
+	  </div>
+    <Result :show="showResult"></Result>
   </main>
 </template>
 
