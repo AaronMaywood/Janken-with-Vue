@@ -10,7 +10,7 @@ const props = defineProps({
 		<p id="judge"></p>
 		<div id="restart_button">
 			<hr>
-			<button type="button" id="restart">再チャレンジ</button>
+			<button type="button" id="restart" @click="$emit('next')">再チャレンジ</button>
 		</div>
 	</div>
 </template>

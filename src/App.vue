@@ -8,15 +8,18 @@ let showResult = ref(false)
 function userHand(e){
   showResult.value = true
 }
+
+function next(e){
+  showResult.value = false
+}
 </script>
 
 <template>
-  {{showResult}}
   <main>
     <div class="userhand">
 	    <UserHand @change="userHand"></UserHand>
 	  </div>
-    <Result :show="showResult"></Result>
+    <Result :show="showResult" @next="next"></Result>
   </main>
 </template>
 
