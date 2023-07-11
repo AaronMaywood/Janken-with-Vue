@@ -1,5 +1,6 @@
 <script setup>
 import { ref,computed } from 'vue'
+import { update } from '../store.js'
 const play = ref("")
 const judge = ref("")
 
@@ -27,24 +28,25 @@ function judge_play(){
   let judge
   if( props.user === comp ){
     judge = 'あいこ'
+    update(false)
   }else if( props.user === '👊' && comp === '✌'){
     judge = 'あなたの勝ち！'
-    user_win++
+    update(true)
   }else if( props.user === '👊' && comp === '✋'){
     judge = 'コンピューターの勝ち！'
-    comp_win++
+    update(false)
   }else if( props.user === '✌' && comp === '👊'){
     judge = 'コンピューターの勝ち！'
-    comp_win++
+    update(false)
   }else if( props.user === '✌' && comp === '✋'){
     judge = 'あなたの勝ち！'
-    user_win++
+    update(true)
   }else if( props.user === '✋' && comp === '👊'){
     judge = 'あなたの勝ち！'
-    user_win++
+    update(true)
   }else if( props.user === '✋' && comp === '✌'){
     judge = 'コンピューターの勝ち！'
-    comp_win++
+    update(false)
   }
 
   const hand_to_index = {
@@ -58,11 +60,8 @@ function judge_play(){
     judge: judge,
   }
 }
-
-
 </script>
 <template>
-  
 	<div id="result" v-if="show">
 		<p>じゃーんけん...ぽん！</p>
     <p id="play">
@@ -72,12 +71,12 @@ function judge_play(){
       -->
       <span v-html="result.play"></span>
     </p>
+    <hr>
     <p id="judge">
       <span v-html="result.judge"></span>
     </p>
 		<div id="restart_button">
-			<hr>
-			<button type="button" id="restart" @click="$emit('next')">再チャレンジ</button>
+			<button type="button" id="restart" @click="$emit('next')">次へ</button>
 		</div>
 	</div>
 </template>
