@@ -18,7 +18,9 @@ function next(e){
 
 <template>
   <main>
-    <div class="userhand">
+    <!-- テンプレート中での ref は、showResult.value ではなく showResult という省略形を使用する必要がある -->
+    <div :class="showResult !== true ? 'show' : 'hide'">
+      <p>じゃーんけん...</p>
 	    <UserHand @change="userHand"></UserHand>
 	  </div>
     <Result :show="showResult" :user="user" @next="next"></Result>
@@ -26,7 +28,7 @@ function next(e){
 </template>
 
 <style scoped>
-.userhand {
-	display:block;
+.hide {
+	display: none;
 }
 </style>

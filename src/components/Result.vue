@@ -64,7 +64,7 @@ function judge_play(){
 <template>
   
 	<div id="result" v-if="show">
-		<p>じゃんけん...ぽん！</p>
+		<p>じゃーんけん...ぽん！</p>
     <p id="play">
       <!--
         htmlを含む文字列を表示するときはマスタッシュ構文の変わりに v-html を使用する
