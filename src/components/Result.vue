@@ -1,6 +1,6 @@
 <script setup>
 import { ref,computed } from 'vue'
-import { update } from '../store.js'
+import { update, isGameOver } from '../store.js'
 const play = ref("")
 const judge = ref("")
 
@@ -75,7 +75,7 @@ function judge_play(){
     <p id="judge">
       <span v-html="result.judge"></span>
     </p>
-		<div id="restart_button">
+    <div id="restart_button" v-show="isGameOver !== true">
 			<button type="button" id="restart" @click="$emit('next')">次へ</button>
 		</div>
 	</div>

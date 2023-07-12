@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import { counter, user_win, comp_win } from '../store.js'
 </script>
 <template>
