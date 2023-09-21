@@ -11,9 +11,9 @@ const props = defineProps({
 
 const hand = ['👊','✌','✋']
 const hand_img = [
-  '<img src="images/janken_gu.png" width="64" alt="">',
-  '<img src="images/janken_choki.png" width="64" alt="">',
-  '<img src="images/janken_pa.png" width="64" alt="">'
+  '<img src="/images/janken_gu.png" width="64" alt="">',
+  '<img src="/images/janken_choki.png" width="64" alt="">',
+  '<img src="/images/janken_pa.png" width="64" alt="">'
 ]
 
 const result = computed(() => {
