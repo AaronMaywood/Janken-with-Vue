@@ -30,8 +30,6 @@ function next(e){
 	    <UserHand @change="userHand"></UserHand>
 	  </div>
     <Result :show="showResult" :user="user" @next="next"></Result>
-    <div v-show="isGameOver === true">
-      <GameOver @restart="next"></GameOver>
-    </div>
+    <GameOver v-show="isGameOver === true" @restart="next"></GameOver>
   </main>
 </template>
