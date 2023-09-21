@@ -1,8 +1,6 @@
 <script setup>
 import { ref,computed } from 'vue'
 import { update, isGameOver } from '../store.js'
-const play = ref("")
-const judge = ref("")
 
 const props = defineProps({
   show: Boolean,

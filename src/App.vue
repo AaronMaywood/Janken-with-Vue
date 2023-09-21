@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { counter, isGameOver } from './store.js'
+import { isGameOver } from './store.js'
 import UserHand from './components/UserHand.vue'
 import Result from './components/Result.vue'
 import Total from './components/Total.vue'
