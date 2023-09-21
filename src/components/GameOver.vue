@@ -18,7 +18,7 @@ function restartGame(){
 }
 </script>
 <template>
-  <div id="gameover">
+  <div>
     <hr>
     <p>ゲーム終了</p>
     <p>ゲームの勝者は ... <span id="winner">{{winner}}</span>です！</p>

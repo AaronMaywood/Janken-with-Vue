@@ -7,9 +7,9 @@ function updateUserHand(e){
 </script>
 <template>
 	<div>
-		<label><input type="radio" name="hand" value="👊" v-on:click="updateUserHand"><img src="/images/janken_gu.png" width="64" alt=""></label>
-		<label><input type="radio" name="hand" value="✌" v-on:click="updateUserHand"><img src="/images/janken_choki.png" width="64" alt=""></label>
-		<label><input type="radio" name="hand" value="✋" v-on:click="updateUserHand"><img src="/images/janken_pa.png" width="64" alt=""></label>
+		<label><input type="radio" name="hand" value="👊" @click="updateUserHand"><img src="/images/janken_gu.png" width="64" alt=""></label>
+		<label><input type="radio" name="hand" value="✌" @click="updateUserHand"><img src="/images/janken_choki.png" width="64" alt=""></label>
+		<label><input type="radio" name="hand" value="✋" @click="updateUserHand"><img src="/images/janken_pa.png" width="64" alt=""></label>
 	</div>
 </template>
 <style scoped>

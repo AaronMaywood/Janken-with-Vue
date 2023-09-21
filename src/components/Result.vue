@@ -1,5 +1,5 @@
 <script setup>
-import { ref,computed } from 'vue'
+import { computed } from 'vue'
 import { update, isGameOver } from '../store.js'
 
 const props = defineProps({
@@ -60,7 +60,7 @@ function judge_play(){
 }
 </script>
 <template>
-	<div id="result" v-if="show">
+	<div id="result">
 		<p>じゃーんけん...ぽん！</p>
     <p id="play">
       <!--
@@ -73,7 +73,7 @@ function judge_play(){
     <p id="judge">
       <span v-html="result.judge"></span>
     </p>
-    <div id="restart_button" v-show="isGameOver !== true">
+    <div id="restart_button" v-show="!isGameOver">
 			<button type="button" id="restart" @click="$emit('next')">次へ</button>
 		</div>
 	</div>

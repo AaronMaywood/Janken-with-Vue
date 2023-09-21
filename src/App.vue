@@ -24,12 +24,11 @@ function next(e){
     <h1>コンピューター対戦じゃんけん</h1>
     <p><small>最大で20試合し、得点の高い方か、先に10点取った方がゲームの勝者です。</small></p>
     <Total></Total>
-    <!-- テンプレート中での ref は、showResult.value ではなく showResult という省略形を常に使用する必要がある -->
-    <div v-show="showResult !== true">
+    <div v-show="!showResult">
       <p>じゃーんけん...</p>
 	    <UserHand @change="userHand"></UserHand>
 	  </div>
-    <Result :show="showResult" :user="user" @next="next"></Result>
-    <GameOver v-show="isGameOver === true" @restart="next"></GameOver>
+    <Result v-show="showResult" :show="showResult" :user="user" @next="next"></Result>
+    <GameOver v-show="isGameOver" @restart="next"></GameOver>
   </main>
 </template>
