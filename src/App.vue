@@ -22,7 +22,7 @@ function next(e){
 <template>
   <main>
     <h1>コンピューター対戦じゃんけん</h1>
-    <p><small>最大で20試合し、得点の高い方か、先に10点取った方がゲームの勝者です。</small></p>
+    <p><small>最大で4試合し、得点の高い方か、先に2点取った方がゲームの勝者です。</small></p>
     <Total></Total>
     <div v-show="!showResult">
       <p>じゃーんけん...</p>

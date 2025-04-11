@@ -5,9 +5,9 @@ export const user_win = ref(0)
 export const comp_win = ref(0)
 export const isGameOver = computed(()=>{
   return (
-    counter.value >= 20 ||    // 試合回数が20に到達したか、
-    user_win.value >= 10 ||   // user / comp のどちらかが先に10勝したら、ゲーム終了
-    comp_win.value >= 10)
+    counter.value >= 4 ||    // 試合回数が4に到達したか、
+    user_win.value >= 2 ||   // user / comp のどちらかが先に2勝したら、ゲーム終了
+    comp_win.value >= 2)
     ? true : false
 })
 
