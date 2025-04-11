@@ -11,9 +11,14 @@ export const isGameOver = computed(()=>{
     ? true : false
 })
 
-export function update(isUserWin){
+export function update(reslut){
   counter.value++
-  isUserWin ? user_win.value++ : comp_win.value++
+  if( reslut === 'user_win'){
+    user_win.value++
+  }else if( reslut === 'comp_win'){
+      comp_win.value++
+  }
+  // あいこの場合は、何もしない
 }
 
 export function init(){

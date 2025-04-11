@@ -26,25 +26,25 @@ function judge_play(){
   let judge
   if( props.user === comp ){
     judge = 'あいこ'
-    update(false)
+    update('draw')
   }else if( props.user === '👊' && comp === '✌'){
     judge = 'あなたの勝ち！'
-    update(true)
+    update('user_win')
   }else if( props.user === '👊' && comp === '✋'){
     judge = 'コンピューターの勝ち！'
-    update(false)
+    update('comp_win')
   }else if( props.user === '✌' && comp === '👊'){
     judge = 'コンピューターの勝ち！'
-    update(false)
+    update('comp_win')
   }else if( props.user === '✌' && comp === '✋'){
     judge = 'あなたの勝ち！'
-    update(true)
+    update('user_win')
   }else if( props.user === '✋' && comp === '👊'){
     judge = 'あなたの勝ち！'
-    update(true)
+    update('user_win')
   }else if( props.user === '✋' && comp === '✌'){
     judge = 'コンピューターの勝ち！'
-    update(false)
+    update('comp_win')
   }
 
   const hand_to_index = {
